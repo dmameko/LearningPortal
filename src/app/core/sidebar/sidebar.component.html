@@ -1,0 +1,13 @@
+<div class="sidebar">
+  @for(item of sidebarItems; track item.title) {
+    <a
+      class="sidebar-item"
+      [routerLink]="item.route"
+      routerLinkActive="sidebar-item_active">
+      <i [class]="'sidebar-item__icon fa-regular fa-' + item.icon"></i>
+      <span class="sidebar-item__title">
+        {{ item.title }}
+      </span>
+    </a>
+  }
+</div>

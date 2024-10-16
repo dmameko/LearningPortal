@@ -1,0 +1,11 @@
+.main {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  height: calc(100% - 81px);
+
+  &_left {
+    height: 100%;
+    width: 256px;
+  }
+}
