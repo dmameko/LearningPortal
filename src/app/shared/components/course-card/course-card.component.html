@@ -1,0 +1,28 @@
+@if (course) {
+  <div class="course-card">
+    <div>
+      <img
+        [src]="course.image"
+        alt="Course Card"
+        class="course-card__image"
+        [class.best]="course.bestSeller"
+      />
+      <h3 class="course-card__title">{{ course.title }}</h3>
+    </div>
+    <div>
+      <div class="course-card__info">
+        <img [src]="course.tutorImage" alt="" class="course-card__icon" />
+        <span class="course-card__tutor">{{ course.tutorName }}</span>
+      </div>
+      <div class="course-card__rate">
+        <i class="fa-solid fa-star course-card__star"></i>
+        <span class="course-card__reviews">
+          {{ course.rate + ' (' + course.reviews + ' Reviews)' }}
+        </span>
+      </div>
+      <div class="course-card__footer">
+        <button class="course-card__button">Enroll Course</button>
+      </div>
+    </div>
+  </div>
+}

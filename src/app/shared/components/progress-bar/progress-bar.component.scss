@@ -1,0 +1,16 @@
+:host {
+  width: 100%;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background-color: #E2E2EA;
+  border-radius: 2px;
+
+  &_green {
+    border-radius: 2px;
+    background-color: #00594C;
+    height: 100%;
+  }
+}

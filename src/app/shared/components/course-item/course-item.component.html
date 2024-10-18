@@ -1,0 +1,31 @@
+@if (course) {
+  <div class="course">
+    <img [src]="course.image" alt="Course" class="course__image" />
+    <div class="course__info">
+      <div class="course__title">
+        <h3 class="course__heading">
+          {{ course.title }}
+        </h3>
+        @if (course.status === courseStatuses.IN_PROGRESS || course.status === courseStatuses.QUIZ) {
+          <span class="course__paragraph">
+            {{ course.lastParagraph }}
+          </span>
+        }
+      </div>
+      <div class="course-progress">
+        <div class="course-progress__bar">
+          <span class="course-progress__title">
+            {{ course.progress }}/{{ course.fullAmount }} Lessons
+          </span>
+          <app-progress-bar [full]="course.fullAmount" [progress]="course.progress"></app-progress-bar>
+        </div>
+        <button
+          class="course-progress__button"
+          [class.quiz]="course.status === courseStatuses.QUIZ">
+          {{ course.status === courseStatuses.IN_PROGRESS ? 'Resume' :
+            (course.status === courseStatuses.QUIZ) ? 'Take Quiz' : 'Start' }}
+        </button>
+      </div>
+    </div>
+  </div>
+}

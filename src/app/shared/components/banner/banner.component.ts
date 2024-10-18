@@ -2,14 +2,14 @@ import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-explore',
+  selector: 'app-banner',
   standalone: true,
-  templateUrl: './explore.component.html',
-  styleUrls: ['./explore.component.scss'],
+  templateUrl: './banner.component.html',
+  styleUrls: ['./banner.component.scss'],
   imports: [
     CommonModule,
   ]
 })
-export class ExploreComponent {
+export class BannerComponent {
 
 }

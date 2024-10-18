@@ -1,1 +1,23 @@
-<h1 [style.margin]="'16px'">Dashboard</h1>
+<app-banner></app-banner>
+<div class="block-wrapper">
+  <div class="block">
+    <h3 class="block__heading">Continue Learning</h3>
+    <a class="block__button">See all</a>
+  </div>
+  <div class="flexbox">
+    <div class="flexbox-cards">
+      @for (item of courses; track item.title) {
+        <app-course-item [course]="item"></app-course-item>
+      }
+    </div>
+    <app-progress-calendar></app-progress-calendar>
+  </div>
+</div>
+<div class="block__footer">
+  <h3 class="block__heading">Popular Courses</h3>
+  <div class="columns">
+    @for (card of cards; track card.title) {
+      <app-course-card [course]="card"></app-course-card>
+    }
+  </div>
+</div>
