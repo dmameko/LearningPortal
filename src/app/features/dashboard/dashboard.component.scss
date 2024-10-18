@@ -1,0 +1,62 @@
+.flexbox {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  align-items: start;
+  gap: 32px;
+
+  &-cards {
+    width: calc(100% - 352px);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.block {
+  &-wrapper {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 384px);
+  height: 37px;
+  margin-bottom: 32px;
+
+  &__footer {
+    margin: 40px 0 32px 0;
+
+    .columns {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+  }
+
+  &__heading {
+    color: #031D1B;
+    font-family: 'Mulish', sans-serif;
+    font-size: 31px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0.155px;
+  }
+
+  &__button {
+    color: #00594C;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0.08px;
+    text-decoration: none;
+  }
+}

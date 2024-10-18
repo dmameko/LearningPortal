@@ -1,0 +1,41 @@
+.dropdown {
+  &__container {
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__value {
+    color: #80A5A3;
+    text-align: right;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0.08px;
+  }
+
+  &__list {
+    position: absolute;
+    top: 28px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    z-index: 1000;
+
+    div {
+      padding: 5px 10px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #eee;
+      }
+    }
+  }
+}
+
+.selected {
+  font-weight: bold;
+  color: #407875;
+}

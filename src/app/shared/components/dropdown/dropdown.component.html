@@ -1,0 +1,13 @@
+<div class="dropdown__container">
+  <span class="dropdown__value" (click)="toggleDropdown()">{{ selectedItem }}</span>
+  @if (showDropdown) {
+    <div class="dropdown__list">
+      @for (item of items; track $index) {
+        <div (click)="selectItem(item)"
+             [class.selected]="item === selectedItem">
+          {{ item }}
+        </div>
+      }
+    </div>
+  }
+</div>
